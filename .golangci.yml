@@ -1,0 +1,131 @@
+version: "2"
+output:
+  formats:
+    text:
+      path: stdout
+linters:
+  default: none
+  enable:
+    - bodyclose
+    - copyloopvar
+    - depguard
+    - dogsled
+    - dupl
+    - durationcheck
+    - errcheck
+    - funlen
+    - goconst
+    - gocritic
+    - gocyclo
+    - gomoddirectives
+    - gosec
+    - govet
+    - importas
+    - ineffassign
+    - lll
+    - misspell
+    - nakedret
+    - noctx
+    - nolintlint
+    - prealloc
+    - predeclared
+    - revive
+    - staticcheck
+    - tparallel
+    - unconvert
+    - unparam
+    - unused
+    - wastedassign
+    - whitespace
+  settings:
+    depguard:
+      rules:
+        main:
+          deny:
+            - pkg: github.com/pkg/errors
+              desc: Use `errors` package from the standard library
+    dupl:
+      threshold: 100
+    funlen:
+      lines: 120
+      statements: 60
+      ignore-comments: true
+    goconst:
+      min-len: 2
+      min-occurrences: 2
+    gocritic:
+      enabled-tags:
+        - diagnostic
+        - style
+        - performance
+        - experimental
+        - opinionated
+    gocyclo:
+      min-complexity: 25
+    gosec:
+      excludes:
+        - G115
+    govet:
+      enable:
+        - shadow
+    nakedret:
+      max-func-lines: 50
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      - linters:
+          - dogsled
+          - dupl
+          - funlen
+          - goconst
+          - gocritic
+          - gocyclo
+          - gosec
+          - govet
+          - lll
+          - revive
+          - staticcheck
+          - unparam
+        path: _test.go
+      - linters:
+          - dogsled
+          - dupl
+          - funlen
+          - gocyclo
+          - gosec
+          - govet
+          - lll
+          - revive
+          - staticcheck
+        path: ^tests/
+    paths:
+      - vendor
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - goimports
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+        - prefix(github.com/e2engine/runner-local)
+    goimports:
+      local-prefixes:
+        - github.com/e2engine/runner-local
+  exclusions:
+    generated: lax
+    paths:
+      - vendor
+      - third_party$
+      - builtin$
+      - examples$
