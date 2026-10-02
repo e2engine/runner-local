@@ -10,9 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      GOPRIVATE: github.com/e2engine/*
-
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -21,12 +18,6 @@ jobs:
         uses: actions/setup-go@v7
         with:
           go-version: "1.27.x"
-
-      - name: Configure private modules
-        run: |
-          git config --global \
-            url."https://x-access-token:${{ secrets.E2ENGINE_READ_TOKEN }}@github.com/".insteadOf \
-            "https://github.com/"
 
       - name: Verify
         run: make verify
