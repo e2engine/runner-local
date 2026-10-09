@@ -3,13 +3,16 @@ module github.com/e2engine/runner-local
 go 1.27
 
 require (
-	github.com/e2engine/core v0.1.0
+	github.com/e2engine/core v0.1.2
 	github.com/ygrebnov/errorc v0.6.1
 	github.com/ygrebnov/workers v0.7.1
 )
 
 require (
 	github.com/bufbuild/protocompile v0.14.1 // indirect
+	github.com/e2engine/instrumentation-go v0.1.1 // indirect
+	github.com/e2engine/instrumentation-go/grpc v0.1.1 // indirect
+	github.com/e2engine/instrumentation-go/http v0.1.1 // indirect
 	github.com/ygrebnov/keys v0.2.0 // indirect
 	github.com/ygrebnov/log v0.4.4 // indirect
 	github.com/ygrebnov/metrics v0.1.1 // indirect
