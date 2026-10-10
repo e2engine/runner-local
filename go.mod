@@ -3,7 +3,7 @@ module github.com/e2engine/runner-local
 go 1.27
 
 require (
-	github.com/e2engine/core v0.1.2
+	github.com/e2engine/core v0.2.0
 	github.com/ygrebnov/errorc v0.6.1
 	github.com/ygrebnov/workers v0.7.1
 )
