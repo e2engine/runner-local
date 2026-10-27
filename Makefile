@@ -14,6 +14,11 @@ lint: install-golangci-lint
 	@echo "Running linter..."
 	$(GOLANGCI_LINT) run
 
+.PHONY: vulncheck
+vulncheck: install-govulncheck
+	@echo "Checking for known vulnerabilities..."
+	$(GOVULNCHECK) ./...
+
 .PHONY: test
 test:
 	@echo "Running tests..."
@@ -37,5 +42,5 @@ test-race:
 	@go test ./... -race -count=1 -timeout=600s
 
 .PHONY: verify
-verify: lint test-race
+verify: lint vulncheck test-race
 	@echo "All verifications passed successfully."
