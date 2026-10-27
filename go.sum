@@ -2,8 +2,8 @@ github.com/bufbuild/protocompile v0.14.1 h1:iA73zAf/fyljNjQKwYzUHD6AD4R8KMasmwa/
 github.com/bufbuild/protocompile v0.14.1/go.mod h1:ppVdAIhbr2H8asPk6k4pY7t9zB1OU5DoEw9xY/FUi1c=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/e2engine/core v0.2.1 h1:U0K4Ak4RheCxVX9+pLUyF/k8mrRB9rb0ruxxa6JWUX4=
-github.com/e2engine/core v0.2.1/go.mod h1:8oN/239uuU+jNNA+CxDF7h68HKh0cL+vON9D/mcqN/Y=
+github.com/e2engine/core v0.3.0 h1:hx7THwTfc9wYtFOW7sE9kfLNFOG8ff/2tD+lD4pvzmM=
+github.com/e2engine/core v0.3.0/go.mod h1:8oN/239uuU+jNNA+CxDF7h68HKh0cL+vON9D/mcqN/Y=
 github.com/e2engine/instrumentation-go v0.1.1 h1:pkOQIQWWkGqHdU1F/b0tCtpFyNDc09kKebYZElHZS9k=
 github.com/e2engine/instrumentation-go v0.1.1/go.mod h1:zpWF7koAp+vFqYAfOx3mOJFn4GpLtzetguAs8n7+wIE=
 github.com/e2engine/instrumentation-go/grpc v0.1.1 h1:0sqxF3oCdxdVaJwzTshaf79VMXglVHJQ1bLte7vnH14=
