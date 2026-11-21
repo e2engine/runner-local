@@ -1,10 +1,10 @@
 # E2Engine Local Runner
 
-This module executes E2Engine test jobs locally using a configurable worker pool, manages runtime environment instances, and persists execution state through the E2Engine core execution interfaces.
+Local test execution for E2Engine.
 
 Part of [E2Engine](https://e2engine.dev), an open-source platform for declarative end-to-end testing.
 
-E2Engine project on GitHub: [E2Engine on GitHub](https://github.com/e2engine).
+This module executes E2Engine test jobs locally using a configurable worker pool, manages runtime environment instances, and persists execution state through the E2Engine core execution interfaces.
 
 ## Installation
 
@@ -47,6 +47,12 @@ Run the complete verification suite:
 ```bash
 make verify
 ```
+
+## Links
+
+- [E2Engine website](https://e2engine.dev)
+- [E2Engine documentation](https://e2engine.dev/docs)
+- [E2Engine on GitHub](https://github.com/e2engine)
 
 ## License
 
