@@ -127,9 +127,7 @@ func getSettings(opts ...Option) (*settings, error) {
 	if s.logger == nil {
 		s.logger, err = log.NewSilentLogger()
 		if err != nil {
-			return nil, errorc.With(
-				coreerrors.ErrCannotInitializeLogger, errorc.Error(keys.Cause, err),
-			)
+			return nil, errorc.WithCause(coreerrors.ErrCannotInitializeLogger, err)
 		}
 	}
 
@@ -285,11 +283,11 @@ func (s *Service) Run(ctx context.Context) (runErr error) {
 			}
 
 			if completed {
-				if err := s.environment.Release(
+				if errRelease := s.environment.Release(
 					ctx,
 					result.GetEnvironmentInstanceID(),
-				); err != nil {
-					return err
+				); errRelease != nil {
+					return errRelease
 				}
 			}
 		}
